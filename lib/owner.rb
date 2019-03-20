@@ -34,6 +34,10 @@ class Owner
     self.pets[:cats].each {|cat| cat.mood = "happy"} if !self.pets[:cats].empty?
   end
 
+  def feed_fish
+    self.pets[:fishes].each {|fish| fish.mood = "happy"} if !self.pets[:fishes].empty?
+  end
+
   # --- class methods ---
   def self.all
     @@all
