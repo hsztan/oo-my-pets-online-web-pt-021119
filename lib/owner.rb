@@ -22,6 +22,11 @@ class Owner
     self.pets[:fishes] << Fish.new(name)
   end
 
+  def say_species
+    puts @species
+  end
+
+  # --- class methods ---
   def self.all
     @@all
   end
