@@ -26,6 +26,9 @@ class Owner
     "I am a #{@species}."
   end
 
+  def walk_dogs
+    self.pets[:dogs].each {|dog| dog.mood = "happy"} if !self.pets[:dogs].empty?
+
   # --- class methods ---
   def self.all
     @@all
