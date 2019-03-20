@@ -30,6 +30,10 @@ class Owner
     self.pets[:dogs].each {|dog| dog.mood = "happy"} if !self.pets[:dogs].empty?
   end
 
+  def play_with_cats
+    self.pets[:cats].each {|cat| cat.mood = "happy"} if !self.pets[:cats].empty?
+  end
+
   # --- class methods ---
   def self.all
     @@all
