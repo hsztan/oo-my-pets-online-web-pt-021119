@@ -38,6 +38,12 @@ class Owner
     self.pets[:fishes].each {|fish| fish.mood = "happy"} if !self.pets[:fishes].empty?
   end
 
+  def sell_pets
+    self.pets.each do |animal, pets|
+      pets.each {|pet| pet.mood = "nervous"}
+    end
+  end
+
   # --- class methods ---
   def self.all
     @@all
