@@ -39,10 +39,16 @@ class Owner
   end
 
   def sell_pets
-    self.pets.each do |animal, pets|
+    self.pets.each do |type, pets|
       pets.each {|pet| pet.mood = "nervous"}
       pets.clear
     end
+  end
+
+  def list_pets
+    self.pets.each do |type, pets|
+
+    #=> "I have 2 fish, 3 dog(s), and 1 cat(s)."
   end
 
   # --- class methods ---
