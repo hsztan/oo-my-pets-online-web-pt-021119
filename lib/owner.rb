@@ -46,8 +46,9 @@ class Owner
   end
 
   def list_pets
-    self.pets.each do |type, pets|
-
+    list_hash = {}
+    self.pets.each {|type, pets| list_hash[type] = pets.count}
+    "I have #{list_hash["fishes"]} fish, #{list_hash["dogs"]} dog(s), and #{list_hash["cats"] cat(s).}"
     #=> "I have 2 fish, 3 dog(s), and 1 cat(s)."
   end
 
